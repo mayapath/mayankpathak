@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mayank Pathak — Enterprise AI Leader</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --ink: #0a0a0f;
+    --paper: #f5f2ed;
+    --gold: #c9a84c;
+    --gold-light: #e8d5a3;
+    --teal: #1a6b6b;
+    --teal-light: #2a9d9d;
+    --muted: #6b6760;
+    --rule: #d4cfc8;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Outfit', 'Segoe UI', Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+    background: rgba(245,242,237,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--teal); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 8rem 4rem 4rem;
+    gap: 4rem;
+    position: relative;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26,107,107,0.06) 0%, rgba(201,168,76,0.08) 100%);
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+
+  .hero-text { position: relative; z-index: 1; }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 1.2rem;
+    opacity: 1;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.4rem;
+    opacity: 1;
+    animation: fadeUp 0.8s 0.35s forwards;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--teal);
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    opacity: 1;
+    animation: fadeUp 0.8s 0.5s forwards;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    color: #3d3a35;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    opacity: 1;
+    animation: fadeUp 0.8s 0.65s forwards;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    opacity: 1;
+    animation: fadeUp 0.8s 0.8s forwards;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    background: var(--teal);
+    color: #fff;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover { background: var(--teal-light); transform: translateY(-2px); }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    background: transparent;
+    color: var(--ink);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--ink);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-outline:hover { background: var(--ink); color: var(--paper); transform: translateY(-2px); }
+
+  /* ── HERO VISUAL ── */
+  .hero-visual {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    animation: fadeIn 1s 0s forwards;
+  }
+
+  .hero-card {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 24px 24px 0 var(--gold-light);
+  }
+
+  .hero-card::before {
+    content: 'EDISENSE · LIVE METRICS';
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .metric-row:last-child { border-bottom: none; }
+
+  .metric-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: rgba(245,242,237,0.5);
+    letter-spacing: 0.05em;
+  }
+
+  .metric-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  .metric-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--teal-light);
+    margin-left: 0.5rem;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 6rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.8rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 3rem;
+  }
+
+  .section-title em { font-style: italic; color: var(--teal); }
+
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 0 4rem;
+  }
+
+  /* ── EDISENSE SECTION ── */
+  .edisense-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .edisense-story p {
+    color: #3d3a35;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .cap-item {
+    padding: 1.2rem;
+    border: 1px solid var(--rule);
+    background: rgba(255,255,255,0.5);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .cap-item:hover { border-color: var(--teal); transform: translateY(-2px); }
+
+  .cap-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+  }
+
+  .cap-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: var(--ink);
+  }
+
+  .cap-desc {
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── ARCHITECTURE ── */
+  .arch-section { background: var(--ink); color: var(--paper); padding: 6rem 4rem; }
+
+  .arch-inner { max-width: 1200px; margin: 0 auto; }
+
+  .arch-section .section-label { color: var(--gold); }
+  .arch-section .section-title { color: var(--paper); }
+  .arch-section .section-title em { color: var(--teal-light); }
+
+  .arch-diagram {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .arch-node {
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 1.5rem;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .arch-node:hover { border-color: var(--teal-light); }
+
+  .arch-node.orchestrator {
+    grid-column: 1 / -1;
+    border-color: var(--gold);
+    background: rgba(201,168,76,0.05);
+  }
+
+  .arch-node-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .arch-node-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--paper);
+  }
+
+  .arch-node-desc {
+    font-size: 0.8rem;
+    color: rgba(245,242,237,0.55);
+    line-height: 1.5;
+  }
+
+  .agent-badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.6rem;
+    background: rgba(42,157,157,0.15);
+    border: 1px solid var(--teal-light);
+    color: var(--teal-light);
+    margin-top: 0.5rem;
+  }
+
+  /* ── EXPERTISE ── */
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .expertise-card {
+    padding: 2rem;
+    border-top: 3px solid var(--teal);
+    background: rgba(255,255,255,0.6);
+  }
+
+  .expertise-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .expertise-title {
+    font-family: 'Outfit', 'Segoe UI', Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.8rem;
+    color: var(--ink);
+  }
+
+  .expertise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.6rem;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    color: var(--muted);
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0.6rem; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--teal), var(--gold), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+    padding-left: 2rem;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 0.55rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 2px solid var(--paper);
+    box-shadow: 0 0 0 1px var(--teal);
+  }
+
+  .timeline-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+
+  .timeline-role {
+    font-family: 'Outfit', 'Segoe UI', Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-company {
+    font-size: 0.85rem;
+    color: var(--teal);
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    background: linear-gradient(135deg, var(--ink) 0%, #1a2a2a 100%);
+    color: var(--paper);
+    padding: 6rem 4rem;
+    text-align: center;
+  }
+
+  .contact-inner { max-width: 600px; margin: 0 auto; }
+
+  .contact-section .section-label { color: var(--gold); }
+  .contact-section .section-title { color: var(--paper); margin-bottom: 1rem; }
+
+  .contact-section p {
+    color: rgba(245,242,237,0.6);
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 2rem 4rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    border-top: 1px solid var(--rule);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .reveal.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.2rem; }
+    .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; gap: 3rem; }
+    .hero::after { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .edisense-grid { grid-template-columns: 1fr; }
+    .arch-section { padding: 4rem 1.5rem; }
+    .arch-diagram { grid-template-columns: 1fr; }
+    .arch-node.orchestrator { grid-column: 1; }
+    .expertise-grid { grid-template-columns: 1fr 1fr; }
+    .contact-section { padding: 4rem 1.5rem; }
+    hr.rule { margin: 0 1.5rem; }
+  }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .capabilities-grid { grid-template-columns: 1fr; }
+    .expertise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">MP</a>
+  <ul class="nav-links">
+    <li><a href="#edisense">EDISENSE</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Enterprise AI Enablement · Healthcare SaaS · Remote · North Bend, WA</p>
+    <h1 class="hero-name">Mayank<br/><em>Pathak</em></h1>
+    <p class="hero-title">Director — Enterprise AI Enablement</p>
+    <p class="hero-desc">17 years building AI-driven knowledge platforms, workforce readiness ecosystems, and enterprise capability programs at the intersection of AI strategy, healthcare SaaS, and human capability.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">Get in Touch</a>
+      <a href="https://github.com/mayapath/mayankpathak" target="_blank" rel="noopener" target="_blank" class="btn-outline">GitHub Profile →</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="metric-row">
+        <span class="metric-label">CONVERSATION SESSIONS</span>
+        <span><span class="metric-value">5,200</span><span class="metric-sub">↑83% MoM</span></span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">ACTIVE USERS</span>
+        <span><span class="metric-value">600+</span><span class="metric-sub">↑139% since launch</span></span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">HOURS SAVED</span>
+        <span><span class="metric-value">767</span><span class="metric-sub">hrs · 70 days</span></span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">AUTO-RESOLUTION</span>
+        <span><span class="metric-value">63%</span><span class="metric-sub">no human needed</span></span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">ENGAGEMENT RATE</span>
+        <span><span class="metric-value">53%</span><span class="metric-sub">sustained</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="rule"/>
+
+<!-- EDISENSE -->
+<section id="edisense">
+  <p class="section-label reveal">Flagship Project</p>
+  <h2 class="section-title reveal">EDISENSE — <em>Enterprise AI</em><br/>Knowledge Platform</h2>
+
+  <div class="edisense-grid">
+    <div class="edisense-story reveal">
+      <p>EDISENSE is an always-on enterprise AI assistant I designed and built from the ground up — letting employees ask questions in plain English across complex healthcare SaaS documentation, eliminating manual searches, SME drain, and escalation bottlenecks.</p>
+      <p>Built on Microsoft Copilot Studio with RAG pipelines and Claude Code, EDISENSE intelligently routes queries across Smart Trading, Enrollment, FHIR, and SaaS platform domains — delivering grounded, role-specific answers in seconds.</p>
+      <p>In its first 70 days, EDISENSE handled 5,200 conversation sessions, saved 767 hours of productivity, and auto-resolved 63% of queries without any human intervention.</p>
+      <p style="margin-top:1.5rem;">
+        <a href="https://github.com/mayapath/mayankpathak" target="_blank" rel="noopener" target="_blank" class="btn-outline" style="font-size:0.7rem;">View on GitHub →</a>
+      </p>
+    </div>
+
+    <div class="capabilities-grid reveal">
+      <div class="cap-item">
+        <div class="cap-num">01</div>
+        <div class="cap-name">Intelligent Routing</div>
+        <div class="cap-desc">Detects intent & routes to Smart Trading, Enrollment or SaaS via custom topics</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-num">02</div>
+        <div class="cap-name">Troubleshooting Engine</div>
+        <div class="cap-desc">Step-by-step K8s deployment & config issue resolution</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-num">03</div>
+        <div class="cap-name">FGA Mode</div>
+        <div class="cap-desc">Deep config & schema analysis — surfaces gaps and root causes</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-num">04</div>
+        <div class="cap-name">State Medicaid KP Packs</div>
+        <div class="cap-desc">Instant fetch of state-specific rules, error codes & payer guides</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-num">05</div>
+        <div class="cap-name">FHIR Gateway</div>
+        <div class="cap-desc">9115-F, CMS-57-F compliance, patient access & payer-to-payer rules</div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-num">06</div>
+        <div class="cap-name">SaaS Platform Ops</div>
+        <div class="cap-desc">Guides Kubernetes deployments, CI/CD pipelines & monitoring</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule"/>
+
+<!-- ARCHITECTURE -->
+<div class="arch-section" id="architecture">
+  <div class="arch-inner">
+    <p class="section-label">EDISENSE 2.0</p>
+    <h2 class="section-title">Claude Code + MCP<br/><em>Multi-Agent Architecture</em></h2>
+
+    <div class="arch-diagram">
+      <div class="arch-node orchestrator">
+        <div class="arch-node-tag">Orchestrator Layer</div>
+        <div class="arch-node-name">EdiSENSE Orchestrator</div>
+        <div class="arch-node-desc">Microsoft Copilot Studio · Intelligent routing via custom topics · Power Automate flows for escalation, feedback & audit · MCP Protocol Layer connecting all child agents · Frontend unchanged — same Microsoft Teams experience</div>
+      </div>
+
+      <div class="arch-node">
+        <div class="arch-node-tag">Phase 1 · Dec 2026</div>
+        <div class="arch-node-name">Confluence Agent</div>
+        <div class="arch-node-desc">Knowledge retrieval, page search & space-aware Q&A across Edifecs wiki</div>
+        <span class="agent-badge">Claude Code + MCP</span>
+      </div>
+
+      <div class="arch-node">
+        <div class="arch-node-tag">Phase 1 · Dec 2026</div>
+        <div class="arch-node-name">JIRA Agent</div>
+        <div class="arch-node-desc">Ticket lookup, sprint status & issue triage automation</div>
+        <span class="agent-badge">Claude Code + MCP</span>
+      </div>
+
+      <div class="arch-node">
+        <div class="arch-node-tag">Phase 2 · Q1 2027</div>
+        <div class="arch-node-name">FHIR Agent</div>
+        <div class="arch-node-desc">9115-F, CMS-57-F compliance · patient access & payer-to-payer mandates</div>
+        <span class="agent-badge">Claude Code + MCP</span>
+      </div>
+
+      <div class="arch-node">
+        <div class="arch-node-tag">Phase 2 · Q1 2027</div>
+        <div class="arch-node-name">EM Intelligence Agent</div>
+        <div class="arch-node-desc">Encounter Management workflows, claim logic & error resolution</div>
+        <span class="agent-badge">Claude Code + MCP</span>
+      </div>
+
+      <div class="arch-node">
+        <div class="arch-node-tag">Phase 2 · Q1 2027</div>
+        <div class="arch-node-name">ENR Agent</div>
+        <div class="arch-node-desc">Enrollment Management rules, eligibility & state-specific processing</div>
+        <span class="agent-badge">Claude Code + MCP</span>
+      </div>
+
+      <div class="arch-node">
+        <div class="arch-node-tag">Phase 3 · Q1 2027</div>
+        <div class="arch-node-name">Bugzilla Agent</div>
+        <div class="arch-node-desc">Bug lookup, defect history & resolution cross-reference</div>
+        <span class="agent-badge">Claude Code + MCP</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <p class="section-label reveal">Core Expertise</p>
+  <h2 class="section-title reveal">What I <em>Bring</em></h2>
+
+  <div class="expertise-grid">
+    <div class="expertise-card reveal">
+      <div class="expertise-icon">🤖</div>
+      <div class="expertise-title">AI Strategy & Governance</div>
+      <div class="expertise-tags">
+        <span class="tag">Enterprise AI Programs</span>
+        <span class="tag">Agentic AI</span>
+        <span class="tag">Copilot Studio</span>
+        <span class="tag">Responsible AI</span>
+        <span class="tag">Human-in-the-loop</span>
+        <span class="tag">Risk Guardrails</span>
+      </div>
+    </div>
+    <div class="expertise-card reveal">
+      <div class="expertise-icon">⚙️</div>
+      <div class="expertise-title">Generative AI & LLM Ops</div>
+      <div class="expertise-tags">
+        <span class="tag">RAG Pipelines</span>
+        <span class="tag">LLM Orchestration</span>
+        <span class="tag">Claude Code</span>
+        <span class="tag">MCP Architecture</span>
+        <span class="tag">Prompt Engineering</span>
+        <span class="tag">AI Evaluation</span>
+      </div>
+    </div>
+    <div class="expertise-card reveal">
+      <div class="expertise-icon">🏥</div>
+      <div class="expertise-title">Healthcare SaaS</div>
+      <div class="expertise-tags">
+        <span class="tag">FHIR</span>
+        <span class="tag">HL7</span>
+        <span class="tag">EDI</span>
+        <span class="tag">Encounter Management</span>
+        <span class="tag">Smart Trading</span>
+        <span class="tag">Payment Integrity</span>
+      </div>
+    </div>
+    <div class="expertise-card reveal">
+      <div class="expertise-icon">☁️</div>
+      <div class="expertise-title">Cloud & Infrastructure</div>
+      <div class="expertise-tags">
+        <span class="tag">AWS</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">Azure AI</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">SharePoint Embedded</span>
+        <span class="tag">Power Automate</span>
+      </div>
+    </div>
+    <div class="expertise-card reveal">
+      <div class="expertise-icon">📐</div>
+      <div class="expertise-title">Enablement & Workforce</div>
+      <div class="expertise-tags">
+        <span class="tag">Role-Based Learning</span>
+        <span class="tag">SaaS Onboarding</span>
+        <span class="tag">AI Adoption</span>
+        <span class="tag">Capability Frameworks</span>
+        <span class="tag">SME-Independent Systems</span>
+      </div>
+    </div>
+    <div class="expertise-card reveal">
+      <div class="expertise-icon">🌍</div>
+      <div class="expertise-title">Global Delivery</div>
+      <div class="expertise-tags">
+        <span class="tag">US Health Plans</span>
+        <span class="tag">Blue Plans</span>
+        <span class="tag">Managed Care Orgs</span>
+        <span class="tag">Middle East Markets</span>
+        <span class="tag">Remote Leadership</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule"/>
+
+<!-- CAREER -->
+<section id="career">
+  <p class="section-label reveal">Experience</p>
+  <h2 class="section-title reveal">17 Years of <em>Impact</em></h2>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-year">APR 2025 — PRESENT</div>
+      <div class="timeline-role">Director – Enterprise AI Enablement</div>
+      <div class="timeline-company">Cotiviti (Edifecs University) · North Bend, WA (Remote)</div>
+      <div class="timeline-desc">Leading enterprise AI enablement and capability development for global healthcare SaaS platforms serving major U.S. health plans. Operationalized Microsoft Copilot ecosystem solutions with C-suite and VP-level stakeholders. Delivering EDISENSE 2.0 — Claude Code + MCP multi-agent architecture.</div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-year">2021 — 2025</div>
+      <div class="timeline-role">Senior Manager – AI & Technical Enablement</div>
+      <div class="timeline-company">Edifecs Inc. · Bellevue, WA</div>
+      <div class="timeline-desc">Built and scaled technical training programs on FHIR, EDI, and SaaS deployments. Led first large-scale eLearning initiative — 90+ deliverables for a major state Medicaid VBC Portal. Architected EDISENSE AI platform from concept to production.</div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-year">2013 — 2021</div>
+      <div class="timeline-role">Technical Leadership (Progressive Roles)</div>
+      <div class="timeline-company">Edifecs Technologies · Chandigarh, India / Bellevue, WA</div>
+      <div class="timeline-desc">International assignment for Middle East clients generating ~$1M in company revenue. Trained major North America health plans on Smart Trading & Encounter Management SaaS. Reduced new hire deployment from 60 → 35 days via Technical Boot Camp.</div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-year">2012 — 2013</div>
+      <div class="timeline-role">Technical Analyst</div>
+      <div class="timeline-company">HCL Technologies · Noida, India</div>
+      <div class="timeline-desc">Enterprise technology training for BFSI & Healthcare. Received Best Trainer Award — JAS Q3 2013.</div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-year">2010 — 2012</div>
+      <div class="timeline-role">Consultant</div>
+      <div class="timeline-company">Persistent Systems · Pune, India</div>
+      <div class="timeline-desc">Company-wide knowledge sessions for emerging technologies and new engineering hires. Star Performer Award Q3 2011–12.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <p class="section-label">Let's Connect</p>
+    <h2 class="section-title">Open to Senior <em>AI Leadership</em> Roles</h2>
+    <p>Director · VP · Head of AI · Enterprise AI Strategy · Remote · Washington State</p>
+    <div class="contact-links">
+      <a href="mailto:mayank07in@gmail.com" target="_blank" class="btn-primary">✉ mayank07in@gmail.com</a>
+      <a href="https://www.linkedin.com/in/mayankp07/" target="_blank" rel="noopener" target="_blank" class="btn-outline" style="color:#f5f2ed;border-color:#f5f2ed;">LinkedIn →</a>
+      <a href="https://github.com/mayapath/mayankpathak" target="_blank" rel="noopener" target="_blank" class="btn-outline" style="color:#f5f2ed;border-color:#f5f2ed;">GitHub →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 Mayank Pathak · North Bend, WA · Built with intention
+</footer>
+
+<script>
+  // Scroll reveal - add hidden class first, then reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  
+  // Only animate if user hasn't scrolled yet (i.e. element is below fold)
+  revealEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top > window.innerHeight) {
+      el.classList.add('hidden');
+    }
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.remove('hidden');
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  revealEls.forEach(el => observer.observe(el));
+
+  // Animate metric values
+  function animateCount(el, target, suffix = '') {
+    let start = 0;
+    const duration = 1800;
+    const step = timestamp => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target).toLocaleString() + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  const metricValues = document.querySelectorAll('.metric-value');
+  const metricData = [5200, 600, 767, 63, 53];
+  const metricSuffix = ['', '+', '', '%', '%'];
+
+  const heroObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        metricValues.forEach((el, i) => {
+          setTimeout(() => animateCount(el, metricData[i], metricSuffix[i]), i * 150);
+        });
+        heroObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (metricValues.length) heroObserver.observe(metricValues[0].closest('.hero-card'));
+</script>
+</body>
+</html>
