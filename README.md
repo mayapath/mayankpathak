@@ -33,12 +33,12 @@ EDISENSE is the AI platform I designed and deployed from the ground up — an al
 |Metric                    |Result                                                               |
 |--------------------------|---------------------------------------------------------------------|
 |💬 Conversation Sessions   |**5,200** — ↑ 83% MoM                                                |
-|👥 Active Users (May)      |**~800** — ↑ 139% since launch in March 2026                                       |
-|⏱️ Time Saved (Est.)       |**767 hours** productivity reclaimed                                 |
+|👥 Active Users (May)      |**~700** — ↑ 139% since launch in March 2026                                       |
+|⏱️ Time Saved (Est.)       |**830 hours** productivity reclaimed                                 |
 |🤖 Auto-Resolution Rate    |**63%** — no human intervention needed                               |
 |📈 Engagement Rate         |**53%** — sustained above-benchmark                                  |
 |📅 Daily Active Users      |**80/day** baseline                                                  |
-|📈 ROI — FY26–27 Projection|**$2M–$3M** (based on 139% user growth trajectory)|
+|📈 ROI — FY26–27 Projection|**$2.5M–$3M** (based on 139% user growth trajectory)|
 |🔍 Knowledge Discovery Time|**30–40% reduction**                                                 |
 |🚀 Onboarding Acceleration |**~25% faster** cycle times                                          |
 
@@ -137,7 +137,7 @@ A core pillar of my career has been enabling global teams to successfully adopt 
 ├─────────────────────────────────────────────────────────────────────┤
 │  HEALTHCARE SAAS & INTEROPERABILITY                                 │
 │  FHIR · HL7 · EDI · Encounter Management · Smart Trading           │
-│  VBC Portals · Payer/provider workflows · Payment integrity         │
+│  · Payer/provider workflows · Payment integrity                     │
 ├─────────────────────────────────────────────────────────────────────┤
 │  CLOUD & INFRASTRUCTURE                                             │
 │  AWS · Kubernetes · Azure AI · Git/CI-CD · SharePoint Embedded     │
@@ -159,7 +159,7 @@ A core pillar of my career has been enabling global teams to successfully adopt 
 2025 →  Director, Enterprise AI Enablement @ Cotiviti
          └─ AI strategy & enablement for global healthcare SaaS
          └─ EDISENSE 2.0: Claude Code + MCP multi-agent architecture
-         └─ 5,200 sessions · 767 hrs saved · $250K+ ROI in 70 days
+         └─ 6,000 sessions · 830 hrs saved · $250K+ ROI in 70 days
 
 2021 →  Sr. Manager, AI & Technical Enablement @ Edifecs
          └─ Built EDISENSE v1: 600+ users · 63% auto-resolution rate
@@ -167,7 +167,7 @@ A core pillar of my career has been enabling global teams to successfully adopt 
          └─ Kubernetes & Edge Server enablement for major Blue Plan
 
 2013 →  Technical Leadership (Progressive) @ Edifecs Technologies
-         └─ ~$1M revenue from Middle East SaaS training programs
+         └─ ~$3M revenue from North America Middle East SaaS training programs
          └─ Trained national payers & Blue Plans on Smart Trading SaaS
          └─ New hire cycle: 60 days → 35 days (Technical Boot Camp)
 
