@@ -37,8 +37,7 @@ EDISENSE is the AI platform I designed and deployed from the ground up — an al
 |⏱️ Time Saved (Est.)       |**767 hours** productivity reclaimed                                 |
 |🤖 Auto-Resolution Rate    |**63%** — no human intervention needed                               |
 |📈 Engagement Rate         |**53%** — sustained above-benchmark                                  |
-|📅 Daily Active Users      |**50/day** baseline                                                  |
-|💰 ROI — Year 1 Actuals    |**$250K+** annualized (training team rates, conservative baseline)   |
+|📅 Daily Active Users      |**80/day** baseline                                                  |
 |📈 ROI — FY26–27 Projection|**$2M–$3M** (based on 139% user growth trajectory)|
 |🔍 Knowledge Discovery Time|**30–40% reduction**                                                 |
 |🚀 Onboarding Acceleration |**~25% faster** cycle times                                          |
