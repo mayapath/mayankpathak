@@ -1,7 +1,5 @@
 <div align="center">
 
-<!-- Header Banner -->
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Mayank%20Pathak&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Director%20%E2%80%93%20Enterprise%20AI%20Enablement%20%7C%20AI%20Knowledge%20Platforms%20%7C%20Healthcare%20SaaS&descAlignY=58&descSize=16&descColor=a8d8ea" width="100%"/>
 
 <br/>
@@ -26,20 +24,89 @@ Currently at **Cotiviti (Edifecs University)**, I lead AI enablement for global 
 
 ## 🚀 Flagship Project: EDISENSE
 
-> **Enterprise AI Knowledge Platform** | RAG + Microsoft Copilot Studio | SharePoint | Power Platform
+> **Enterprise AI Knowledge Platform** | RAG + Microsoft Copilot Studio + Claude Code | MCP Architecture | Healthcare SaaS
 
-EDISENSE is the flagship AI platform I designed and deployed from the ground up — an always-on assistant that lets employees find answers in plain English across enterprise documentation, eliminating manual searches and escalation bottlenecks.
+EDISENSE is the AI platform I designed and deployed from the ground up — an always-on assistant that lets employees ask questions in plain English across enterprise documentation, eliminating manual searches, SME drain, and escalation bottlenecks across Smart Trading, Enrollment, and SaaS platforms.
 
-|Metric                       |Result                                          |
-|-----------------------------|------------------------------------------------|
-|💰 Annualized Productivity ROI|**$2.5-3 million** (Year 1 actuals)                     |
-|👥 Active Users in Year 1     |**1000+** across engineering, consulting, support|
-|⏱️ Hours Saved Annually       |**3600+ hours** at scale                         |
-|🔍 Knowledge Discovery Time   |**30–40% reduction**                            |
-|🚀 Onboarding Acceleration    |**~25% faster** cycle times                     |
+### 📊 70-Day Adoption Report (Mar–May 2026)
+
+|Metric                    |Result                                                               |
+|--------------------------|---------------------------------------------------------------------|
+|💬 Conversation Sessions   |**5,200** — ↑ 83% MoM                                                |
+|👥 Active Users (May)      |**~600** — ↑ 139% since launch                                       |
+|⏱️ Time Saved (Est.)       |**767 hours** productivity reclaimed                                 |
+|🤖 Auto-Resolution Rate    |**63%** — no human intervention needed                               |
+|📈 Engagement Rate         |**53%** — sustained above-benchmark                                  |
+|📅 Daily Active Users      |**50/day** baseline                                                  |
+|💰 ROI — Year 1 Actuals    |**$250K+** annualized (training team rates, conservative baseline)   |
+|📈 ROI — FY26–27 Projection|**$2M–$3M** (based on 139% user growth trajectory)|
+|🔍 Knowledge Discovery Time|**30–40% reduction**                                                 |
+|🚀 Onboarding Acceleration |**~25% faster** cycle times                                          |
+
+-----
+
+### 🧩 EDISENSE Capabilities
+
+|# |Capability                     |What It Does                                                                                        |
+|--|-------------------------------|----------------------------------------------------------------------------------------------------|
+|01|**Intelligent Product Routing**|Detects intent & routes to Smart Trading, Enrollment, or SaaS via custom Copilot Studio topics      |
+|02|**Troubleshooting Engine**     |Step-by-step K8s deployment & config issue resolution using release notes & known issues            |
+|03|**Fit Gap Analysis (FGA) Mode**|Deep config & schema analysis — surfaces gaps, root causes & actionable recommendations             |
+|04|**Content Planner**            |Generates role-tailored onboarding plans, workflow guides & checklists                              |
+|05|**Product Doc Search**         |Semantic search across SharePoint, Confluence & Help Center — grounded answers, not raw links       |
+|06|**SaaS Platform Ops**          |Guides Kubernetes deployments, CI/CD pipelines, scaling & monitoring                                |
+|07|**State Medicaid KP Packs**    |Instant fetch of state-specific error codes, 999/277CA acks, business rules & payer companion guides|
+|08|**FHIR Gateway Intelligence**  |9115-F, CMS-57-F compliance — FHIR API, interoperability mandates, payer-to-payer rules             |
+
+-----
+
+### 🏗️ EDISENSE 2.0 — Agentic Architecture (Claude Code + MCP)
+
+> **Orchestrator + Claude-Powered Child Agent Architecture · Built on Copilot Studio · Claude Code**
+
+EDISENSE 2.0 moves from a single RAG assistant to a **multi-agent orchestration system** powered by **Claude Code** and the **Model Context Protocol (MCP)** — with EdiSENSE as the intelligent orchestrator routing to specialized child agents.
+
+```
+User (Microsoft Teams)
+        │  Natural language query
+        ▼
+┌─────────────────────────────────────────────────────┐
+│         EdiSENSE ORCHESTRATOR (Copilot Studio)      │
+│  Intelligent routing · FGA Mode · Troubleshooting   │
+│  FHIR Gateway · State Medicaid KP · SaaS Ops        │
+└───────────────────┬─────────────────────────────────┘
+                    │  MCP Protocol Layer
+        ┌───────────┼────────────┐
+        │           │            │
+   ┌────▼───┐  ┌────▼───┐  ┌────▼───┐
+   │Confluence│  │  FHIR  │  │  JIRA  │  ... + more
+   │ Agent  │  │ Agent  │  │ Agent  │
+   │(Claude │  │(Claude │  │(Claude │
+   │  Code) │  │  Code) │  │  Code) │
+   └────────┘  └────────┘  └────────┘
+
++ EM Intelligence · ENR · Bugzilla agents
+```
+
+**Child Agents (all Claude Code + MCP):**
+
+|Agent                    |Responsibility                                                      |
+|-------------------------|--------------------------------------------------------------------|
+|**Confluence Agent**     |Knowledge retrieval, page search & space-aware Q&A                  |
+|**FHIR Agent**           |9115-F, CMS-57-F compliance, patient access & payer-to-payer rules  |
+|**EM Intelligence Agent**|Encounter Management workflows, claim logic & error resolution      |
+|**JIRA Agent**           |Ticket lookup, sprint status & issue triage automation              |
+|**Bugzilla Agent**       |Bug lookup, defect history & resolution cross-reference             |
+
+**Why MCP?**
+
+- ✅ No custom API glue — each agent exposes standardized MCP tools
+- ✅ Secure, composable, independently versioned per agent
+- ✅ Guardrails inherited — PHI/PII controls & domain boundaries enforced across all agents
+- ✅ Frontend unchanged — same Teams experience for end users
 
 **Tech Stack:**
-`Microsoft Copilot Studio` · `SharePoint Embedded` · `Power Automate` · `RAG Pipelines` · `Azure AI` · `Microsoft 365` 'Claude Code'
+`Claude Code` · `MCP Protocol` · `Microsoft Copilot Studio` · `Anthropic Claude (Sonnet Frontier)` · `SharePoint Embedded` · `Power Automate` · `Microsoft Teams` · `Azure AI`
 
 -----
 
@@ -47,22 +114,13 @@ EDISENSE is the flagship AI platform I designed and deployed from the ground up 
 
 A core pillar of my career has been enabling global teams to successfully adopt and operate complex **healthcare SaaS platforms** — at scale, across payer and provider organizations.
 
-### SaaS Enablement Highlights
-
 |Platform / Domain                            |Impact                                                                                                                                                          |
 |---------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |**Smart Trading & Encounter Management SaaS**|Trained major North America health plans — national payers, regional Blue Plans, managed care orgs                                                              |
 |**VBC (Value-Based Care) Portal**            |Led first large-scale eLearning initiative at Edifecs: **90+ high-quality deliverables** for a major state Medicaid health plan — enabling full platform rollout|
 |**Kubernetes & Edge Server**                 |Delivered enterprise enablement for major Blue Plan → successful encounter submission rates                                                                     |
-|**FHIR / HL7 / EDI Interoperability**        |Scaled training across global payer/provider SaaS deployments supporting U.S. health plans                                                                      |
+|**FHIR / HL7 / EDI Interoperability**        |Scaled training across global payer/provider SaaS deployments                                                                                                   |
 |**AWS & Cloud-Native SaaS**                  |Workforce enablement on cloud infrastructure supporting SaaS delivery at enterprise scale                                                                       |
-
-### What This Looks Like in Practice
-
-- 🩺 **Payer orgs**: Enabled onboarding, go-live readiness, and post-deployment proficiency for claims, encounters, and risk adjustment workflows
-- 🏗️ **Platform rollouts**: Partnered with product and engineering to translate complex SaaS features into role-based training — for consultants, architects, support, and implementation teams
-- 📉 **Reduced deployment risk**: New hire deployment cycle cut from **60 → 35 days** via structured Technical Boot Camp programs
-- 🌍 **Global reach**: Technical enablement for North America, Middle East clients generating **~$1M in revenue**; supported teams across U.S., India, and international markets
 
 -----
 
@@ -75,8 +133,8 @@ A core pillar of my career has been enabling global teams to successfully adopt 
 │  Responsible AI · Risk guardrails · Human-in-the-loop              │
 ├─────────────────────────────────────────────────────────────────────┤
 │  GENERATIVE AI & LLM OPS                                           │
-│  RAG pipeline design · LLM orchestration · Prompt engineering       │
-│  AI evaluation · Model output quality · Knowledge workflow design   │
+│  RAG pipeline design · LLM orchestration · Claude Code             │
+│  MCP architecture · Prompt engineering · AI evaluation             │
 ├─────────────────────────────────────────────────────────────────────┤
 │  HEALTHCARE SAAS & INTEROPERABILITY                                 │
 │  FHIR · HL7 · EDI · Encounter Management · Smart Trading           │
@@ -101,10 +159,11 @@ A core pillar of my career has been enabling global teams to successfully adopt 
 
 2025 →  Director, Enterprise AI Enablement @ Cotiviti
          └─ AI strategy & enablement for global healthcare SaaS
-         └─ Microsoft Copilot ecosystem operationalized enterprise-wide
+         └─ EDISENSE 2.0: Claude Code + MCP multi-agent architecture
+         └─ 5,200 sessions · 767 hrs saved · $250K+ ROI in 70 days
 
 2021 →  Sr. Manager, AI & Technical Enablement @ Edifecs
-         └─ Built EDISENSE: $250K+ ROI · 600+ users
+         └─ Built EDISENSE v1: 600+ users · 63% auto-resolution rate
          └─ 90+ eLearning deliverables for Medicaid VBC Portal rollout
          └─ Kubernetes & Edge Server enablement for major Blue Plan
 
@@ -126,6 +185,8 @@ A core pillar of my career has been enabling global teams to successfully adopt 
 
 <div align="center">
 
+![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP_Protocol-1a1a2e?style=flat-square&logo=anthropic&logoColor=white)
 ![Microsoft Copilot Studio](https://img.shields.io/badge/Copilot_Studio-0078D4?style=flat-square&logo=microsoft&logoColor=white)
 ![Azure AI](https://img.shields.io/badge/Azure_AI-0089D6?style=flat-square&logo=microsoftazure&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
@@ -136,13 +197,13 @@ A core pillar of my career has been enabling global teams to successfully adopt 
 
 </div>
 
-**Domains:** `RAG Pipelines` · `LLM Orchestration` · `Prompt Engineering` · `FHIR` · `HL7` · `EDI` · `Kubernetes` · `CI/CD`
+**Domains:** `RAG Pipelines` · `Agentic AI` · `LLM Orchestration` · `Claude Code` · `MCP` · `Prompt Engineering` · `FHIR` · `HL7` · `EDI` · `Kubernetes` · `CI/CD`
 
 -----
 
 ## 💡 What I’m Thinking About
 
-- 🤖 **Agentic AI systems** for enterprise knowledge work — moving from RAG to autonomous reasoning loops
+- 🤖 **Agentic AI systems** — orchestrator + child agent patterns using Claude Code & MCP for enterprise knowledge work
 - 🏥 **Healthcare AI governance** — responsible deployment of LLMs in payer/provider SaaS environments
 - 📐 **Role-based AI capability frameworks** — how organizations structure AI readiness at scale
 - 🔗 **AI + FHIR** — the next wave of interoperability driven by intelligent agents
@@ -152,7 +213,7 @@ A core pillar of my career has been enabling global teams to successfully adopt 
 
 ## 📫 Let’s Connect
 
-I’m open to **Director / VP-level AI roles**, **enterprise SaaS leadership**, **strategic advisory**, and conversations about AI enablement, healthcare technology, and knowledge platform design.
+I’m open to **Director / VP-level AI roles**, **enterprise SaaS leadership**, **strategic advisory**, and conversations about AI enablement, healthcare technology, and agentic AI platform design.
 
 📧 [mayank07in@gmail.com](mailto:mayank07in@gmail.com)
 🔗 [linkedin.com/in/mayankp07](https://linkedin.com/in/mayankp07)
