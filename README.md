@@ -28,11 +28,11 @@ Currently at **Cotiviti (Edifecs University)**, I lead AI enablement for global 
 
 EDISENSE is the AI platform I designed and deployed from the ground up — an always-on assistant that lets employees ask questions in plain English across enterprise documentation, eliminating manual searches, SME drain, and escalation bottlenecks across Smart Trading, Enrollment, and SaaS platforms.
 
-### 📊 70-Day Adoption Report (Mar–May 2026)
+### 📊 70-Day Adoption Report (Since Launch in March 2026)
 
 |Metric                    |Result                                                               |
 |--------------------------|---------------------------------------------------------------------|
-|💬 Conversation Sessions   |**5,200** — ↑ 83% MoM                                                |
+|💬 Conversation Sessions   |**7000** — ↑ 83% MoM                                                |
 |👥 Active Users (May)      |**~700** — ↑ 139% since launch in March 2026                                       |
 |⏱️ Time Saved (Est.)       |**830 hours** productivity reclaimed                                 |
 |🤖 Auto-Resolution Rate    |**63%** — no human intervention needed                               |
