@@ -14,9 +14,9 @@
 
 ## 👋 About Me
 
-> *“AI should reduce the distance between people and the knowledge they need — instantly, intelligently, at scale.”*
+> *"AI should reduce the distance between people and the knowledge they need — instantly, intelligently, at scale."*
 
-I’m an **Enterprise AI Enablement Director** with **17 years** of experience building AI-driven knowledge platforms, workforce readiness ecosystems, and enterprise capability programs across **healthcare SaaS and enterprise technology**.
+I'm an **Enterprise AI Enablement Director** with **17 years** of experience building AI-driven knowledge platforms, workforce readiness ecosystems, and enterprise capability programs across **healthcare SaaS and enterprise technology**.
 
 Currently at **Cotiviti (Edifecs University)**, I lead AI enablement for global healthcare SaaS platforms serving major U.S. health plans and provider organizations. My work lives at the intersection of **AI strategy, SaaS platform enablement, and human capability development**.
 
@@ -123,6 +123,58 @@ A core pillar of my career has been enabling global teams to successfully adopt 
 
 -----
 
+## 🎓 SaaS Certification Program Design
+
+> **Edifecs SaaS Platform Certification Suite** | Curriculum Design · Competency Architecture · Enterprise Credentialing
+
+Designed and developed a structured certification program to formalize implementation and deployment expertise across Edifecs SaaS platforms — creating a repeatable credentialing pathway for both internal teams and customer-facing professionals.
+
+### 🏅 Certification Tiers
+
+| Certification | Focus | Target Audience |
+|---|---|---|
+| **Edifecs SaaS Platform Implementation Associate** | Core platform setup, configuration, workflow design, and go-live readiness | Implementation consultants, customer success engineers, onboarding specialists |
+| **Edifecs SaaS Platform Deployment Specialist** | Advanced deployment architecture, Kubernetes orchestration, CI/CD pipeline management, edge server configuration | DevOps engineers, platform architects, SaaS operations leads |
+
+### 🏗️ Program Architecture
+
+```
+┌──────────────────────────────────────────────────────────┐
+│           EDIFECS SaaS CERTIFICATION FRAMEWORK           │
+├──────────────────────────────────────────────────────────┤
+│  TIER 1 — Implementation Associate                       │
+│  ├─ Platform fundamentals & configuration                │
+│  ├─ Workflow design & trading partner onboarding         │
+│  ├─ Go-live readiness & validation checklists            │
+│  └─ Scenario-based assessments · Proctored exam          │
+├──────────────────────────────────────────────────────────┤
+│  TIER 2 — Deployment Specialist                          │
+│  ├─ Kubernetes deployment & scaling                      │
+│  ├─ CI/CD pipeline management & edge server config       │
+│  ├─ SaaS ops, monitoring & incident response             │
+│  └─ Lab-based practicum · Performance assessment         │
+└──────────────────────────────────────────────────────────┘
+```
+
+### 🛠️ Design & Development Highlights
+
+| Dimension | Detail |
+|---|---|
+| **Curriculum Architecture** | Competency-mapped learning paths aligned to job roles, platform domains, and real-world implementation scenarios |
+| **Assessment Design** | Scenario-based exams, hands-on lab practicals, and role-play simulations — not just knowledge recall |
+| **Content Modalities** | eLearning modules, instructor-led workshops, lab environments, job aids, and reference guides |
+| **Credentialing Infrastructure** | Digital badge framework, exam delivery integration, and certification registry for verified credentials |
+| **Maintenance Model** | Version-locked to platform release cycles — content updated with each major SaaS release |
+
+### 💼 Business Impact
+
+- Established a **standardized competency baseline** across implementation and deployment functions — reducing variability in customer go-lives
+- Enabled **self-sufficient customer teams** to operate and deploy the platform with reduced SME dependency post-certification
+- Supported **faster ramp times** for new hires and partners by providing a clear, structured credentialing pathway
+- Created reusable curriculum architecture that scaled across **multiple SaaS product lines**
+
+-----
+
 ## 🧠 Core Expertise
 
 ```
@@ -200,7 +252,7 @@ A core pillar of my career has been enabling global teams to successfully adopt 
 
 -----
 
-## 💡 What I’m Thinking About
+## 💡 What I'm Thinking About
 
 - 🤖 **Agentic AI systems** — orchestrator + child agent patterns using Claude Code & MCP for enterprise knowledge work
 - 🏥 **Healthcare AI governance** — responsible deployment of LLMs in payer/provider SaaS environments
@@ -210,9 +262,9 @@ A core pillar of my career has been enabling global teams to successfully adopt 
 
 -----
 
-## 📫 Let’s Connect
+## 📫 Let's Connect
 
-I’m open to **Director / VP-level AI roles**, **enterprise SaaS leadership**, **strategic advisory**, and conversations about AI enablement, healthcare technology, and agentic AI platform design.
+I'm open to **Director / VP-level AI roles**, **enterprise SaaS leadership**, **strategic advisory**, and conversations about AI enablement, healthcare technology, and agentic AI platform design.
 
 📧 [mayank07in@gmail.com](mailto:mayank07in@gmail.com)
 🔗 [linkedin.com/in/mayankp07](https://linkedin.com/in/mayankp07)
@@ -224,6 +276,6 @@ I’m open to **Director / VP-level AI roles**, **enterprise SaaS leadership**, 
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=100&section=footer" width="100%"/>
 
-*“Build systems that make people smarter, faster, and more capable — that’s the mission.”*
+*"Build systems that make people smarter, faster, and more capable — that's the mission."*
 
 </div>
