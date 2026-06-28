@@ -32,15 +32,15 @@ EDISENSE is the AI platform I designed and deployed from the ground up — an al
 
 |Metric                    |Result                                                               |
 |--------------------------|---------------------------------------------------------------------|
-|💬 Conversation Sessions   |**10000** — ↑ 83% MoM                                                |
+|💬 Conversation Sessions   |**10000** — ↑ 83% MoM                                               |
 |👥 Active Users            |**~600** — ↑ 139% since launch in March 2026                                      
-|⏱️ Time Saved (Est.)       |**1200 hours** productivity reclaimed                                 |
-|🤖 Auto-Resolution Rate    |**63%** — no human intervention needed                               |
-|📈 Engagement Rate         |**53%** — sustained above-benchmark                                  |
-|📅 Daily Active Users      |**80/day** baseline                                                  |
+|⏱️ Time Saved (Est.)       |**1200 hours** productivity reclaimed                               |
+|🤖 Auto-Resolution Rate    |**63%** — no human intervention needed                              |
+|📈 Engagement Rate         |**74%** — sustained above-benchmark                                 |
+|📅 Daily Active Users      |**80/day** baseline                                                 |
 |📈 ROI — FY26–27 Projection|**$1.5M–$2M** (based on 139% user growth trajectory)|
-|🔍 Knowledge Discovery Time|**30–40% reduction**                                                 |
-|🚀 Onboarding Acceleration |**~25% faster** cycle times                                          |
+|🔍 Knowledge Discovery Time|**60% reduction**                                                   |
+|🚀 Onboarding Acceleration |**~25% faster** cycle times                                         |
 
 -----
 
