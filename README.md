@@ -54,6 +54,22 @@ The pattern is a hub-and-spoke architecture: one orchestration layer routes work
 
 ---
 
+## Selected Work
+
+These are **sanitized architecture/use-case summaries**. They describe engineering patterns I have implemented without publishing employer source code, internal system names, customer data, endpoints, credentials, or proprietary configurations.
+
+- **Enterprise Document Intelligence** — broad read-focused MCP tool surface for search, retrieval and discovery, with a narrowly controlled generation path and incremental content indexing.
+- **Multimodal Vision Intelligence** — read-only image reasoning with screening before response and no image persistence in the tool layer.
+- **Enterprise Knowledge Retrieval** — constrained search/retrieval across knowledge and work-management systems, intentionally avoiding unnecessary mutation privileges.
+- **Identity-Aware Learning Intelligence** — delegated OAuth so results follow the real signed-in user's permissions instead of a shared service identity.
+- **Domain Scenario Intelligence** — structured, read-only scenario retrieval backed by Cosmos DB and RBAC rather than free-form model memory.
+- **Asynchronous AI Workflow Pipeline** — queue-backed, multi-stage extraction, validation and synthesis for work that does not fit a synchronous tool call.
+- **Standalone AI Training Assistant** — React + Python API application integrating repository tooling, managed secrets and generative AI outside the MCP mesh.
+
+**[Explore the architecture and case studies →](https://mayapath.github.io/mayankpathak/#work)**
+
+---
+
 ## Engineering Patterns
 
 | Pattern | How I use it |
